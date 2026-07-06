@@ -263,6 +263,27 @@ h3 { font-size: 16px; }
 .catalog button .em { font-size: 18px; }
 .catalog button small { display: block; color: var(--text-2); font-size: 12px; }
 
+/* ---------- label scanner ---------- */
+.scan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.photo-slot {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  aspect-ratio: 3 / 4;
+  border: 2px dashed var(--secondary); border-radius: var(--radius);
+  background: var(--card); cursor: pointer;
+  font-family: var(--font-body); font-size: 13px; color: var(--text-2);
+  padding: 10px; overflow: hidden;
+}
+.photo-slot b { font-size: 13px; color: var(--text); }
+.photo-slot.filled { border-style: solid; border-color: var(--success); padding: 0; }
+.photo-slot img { width: 100%; height: 100%; object-fit: cover; }
+.photo-slot .photo-check {
+  position: absolute; top: 8px; right: 8px;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--success); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+
 /* ---------- progress heatmap ---------- */
 .heat { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
 .heat .cell {
