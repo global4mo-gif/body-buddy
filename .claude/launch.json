@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "body-buddy",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "/Users/uneedmo/Desktop/Claude Desktop/mykora_contents_smm/body-buddy-app",
+      "port": 5173
+    }
+  ]
+}
