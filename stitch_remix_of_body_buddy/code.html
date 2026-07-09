@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding | Personal Profile & Goals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#d1e6f1",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#675d4e",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#221a0f",
+                    "background": "#f3faff",
+                    "on-secondary-container": "#59674c",
+                    "primary-fixed-dim": "#e3c0a0",
+                    "surface-container-low": "#e6f6ff",
+                    "on-primary-fixed": "#2a1704",
+                    "primary": "#74593f",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#6c6253",
+                    "inverse-primary": "#e3c0a0",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#80756c",
+                    "on-secondary-fixed": "#131f0a",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3d4b32",
+                    "surface-container-high": "#d6ebf6",
+                    "secondary-container": "#d5e5c3",
+                    "primary-fixed": "#ffdcbe",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#d2c4b2",
+                    "surface": "#f3faff",
+                    "secondary": "#546348",
+                    "on-tertiary-fixed-variant": "#4f4538",
+                    "on-primary-fixed-variant": "#5a422a",
+                    "primary-container": "#ffdab9",
+                    "tertiary-fixed": "#efe0cd",
+                    "on-background": "#091e26",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#c8dde8",
+                    "on-primary-container": "#795e44",
+                    "tertiary-fixed": "#efe0cd",
+                    "on-background": "#091e26",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#c8dde8",
+                    "on-primary-container": "#795e44",
+                    "outline-variant": "#d2c4b9",
+                    "surface-bright": "#f3faff",
+                    "secondary-fixed": "#d8e8c6",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#20333b",
+                    "on-surface-variant": "#4f453d",
+                    "surface-tint": "#74593f",
+                    "secondary-fixed-dim": "#bcccab",
+                    "surface-container-highest": "#d1e6f1",
+                    "on-surface": "#091e26",
+                    "inverse-on-surface": "#dff4ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "sm": "12px",
+                    "lg": "48px",
+                    "container-padding": "20px",
+                    "gutter": "16px",
+                    "md": "24px",
+                    "base": "8px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Quicksand"],
+                    "headline-xl-mobile": ["Quicksand"],
+                    "headline-xl": ["Quicksand"],
+                    "data-display": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["28px", {"lineHeight": "34px", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "700"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "data-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f3faff;
+            font-family: 'Inter', sans-serif;
+            color: #091e26;
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-quicksand { font-family: 'Quicksand', sans-serif; }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .pill-button-active {
+            background-color: #ffdab9; /* primary-container */
+            color: #795e44; /* on-primary-container */
+            box-shadow: 0 4px 12px rgba(116, 89, 63, 0.1);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d1e6f1;
+            border-radius: 10px;
+        }
+
+        .nurture-card {
+            background: #ffffff;
+            box-shadow: 0 10px 30px -5px rgba(116, 89, 63, 0.05);
+            border: 1px solid rgba(209, 230, 241, 0.5);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation { animation: float 6s ease-in-out infinite; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen overflow-x-hidden">
+<!-- Main Navigation Suppression: Onboarding flow has no global nav per instructions -->
+<main class="max-w-4xl mx-auto px-container-padding pt-lg pb-xl">
+<!-- Header Section -->
+<header class="text-center mb-lg">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile font-quicksand text-primary mb-sm">Welcome Home</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto">Let's set up your profile to create a roadmap that feels just right for you.</p>
+</header>
+<!-- Profile Onboarding Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md items-start">
+<!-- Left Column: Image & Personal Details -->
+<div class="md:col-span-7 space-y-md">
+<!-- Avatar Uploader -->
+<section class="nurture-card rounded-lg p-md text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary-container"></div>
+<h2 class="font-headline-lg font-quicksand text-primary mb-sm">Let's put a face to the name!</h2>
+<div class="relative inline-block group cursor-pointer">
+<div class="w-32 h-32 rounded-full border-4 border-secondary-container bg-surface-container overflow-hidden flex items-center justify-center transition-transform active:scale-95 duration-150">
+<img class="w-full h-full object-cover" data-alt="A warm, professional portrait of a friendly health consultant in a brightly lit, modern minimalist office setting. The lighting is soft and golden, with hints of soft sage green plants in the background. The aesthetic is clean, trustworthy, and supportive, using a light mode color palette with gentle peach and blue tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIXEHpBlMDEHcS2N619mkS-A7W5tdet-Dv0FHZhpkDCP7Xp5rPfabbBtHsFTsWJ06p7dARetkErLKGloxE4vX3XzLANlcmLGAH2ZbPbi-5Q1YxMc439yt-4f1yxa802mTudvYgE0YelkBXxNAxGP-P4yS587oRGX175p6MYylExfp9pegabHuGeF-rWCQ1l5uiXyLnmt4d6YNkdjT6BSeWYQb3YWdAzUpQ3-KGsxIu5GbcdfsmCEkVic3e74ZEkaK63v0TPNUNsoE"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl">add_a_photo</span>
+</div>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-sm">edit</span>
+</div>
+</div>
+</section>
+<!-- Personal Info Form -->
+<section class="nurture-card rounded-lg p-md space-y-md">
+<h3 class="font-headline-lg font-quicksand text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">person</span> About You
+                    </h3>
+<!-- Gender Selection -->
+<div class="space-y-sm">
+<label class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Gender Identity</label>
+<div class="flex flex-wrap gap-sm">
+<button class="gender-pill px-6 py-2 rounded-full border-2 border-surface-variant text-on-surface-variant font-quicksand font-semibold transition-all hover:border-primary-container" onclick="selectGender(this)">Male</button>
+<button class="gender-pill px-6 py-2 rounded-full border-2 border-surface-variant text-on-surface-variant font-quicksand font-semibold transition-all hover:border-primary-container pill-button-active" onclick="selectGender(this)">Female</button>
+<button class="gender-pill px-6 py-2 rounded-full border-2 border-surface-variant text-on-surface-variant font-quicksand font-semibold transition-all hover:border-primary-container" onclick="selectGender(this)">Other</button>
+</div>
+</div>
+<!-- Input Fields -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-caps text-label-caps text-outline uppercase">Age</label>
+<input class="w-full bg-surface-container-low border-2 border-transparent focus:border-primary-container focus:ring-0 rounded-full px-md py-3 font-quicksand text-on-surface transition-all" placeholder="24" type="number"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-caps text-label-caps text-outline uppercase">Nationality</label>
+<input class="w-full bg-surface-container-low border-2 border-transparent focus:border-primary-container focus:ring-0 rounded-full px-md py-3 font-quicksand text-on-surface transition-all" placeholder="e.g. Canadian" type="text"/>
+</div>
+<div class="sm:col-span-2 space-y-xs">
+<label class="font-label-caps text-label-caps text-outline uppercase">Region / Location</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">location_on</span>
+<input class="w-full bg-surface-container-low border-2 border-transparent focus:border-primary-container focus:ring-0 rounded-full pl-12 pr-md py-3 font-quicksand text-on-surface transition-all" placeholder="Vancouver, BC" type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Goal Selector -->
+<section class="nurture-card rounded-lg p-md">
+<h3 class="font-headline-lg font-quicksand text-primary mb-md">What's your primary focus?</h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-sm">
+<div class="goal-card group cursor-pointer border-2 border-surface-variant rounded-lg p-4 text-center transition-all hover:bg-surface-container-low hover:border-primary-container" onclick="selectGoal(this)">
+<span class="material-symbols-outlined text-3xl text-secondary mb-2 group-hover:scale-110 transition-transform">trending_down</span>
+<p class="font-quicksand font-bold text-on-surface-variant">Lose Weight</p>
+</div>
+<div class="goal-card group cursor-pointer border-2 border-primary-container bg-primary-container rounded-lg p-4 text-center transition-all shadow-sm" onclick="selectGoal(this)">
+<span class="material-symbols-outlined text-3xl text-primary mb-2 scale-110">balance</span>
+<p class="font-quicksand font-bold text-on-primary-container">Maintain</p>
+</div>
+<div class="goal-card group cursor-pointer border-2 border-surface-variant rounded-lg p-4 text-center transition-all hover:bg-surface-container-low hover:border-primary-container" onclick="selectGoal(this)">
+<span class="material-symbols-outlined text-3xl text-secondary mb-2 group-hover:scale-110 transition-transform">trending_up</span>
+<p class="font-quicksand font-bold text-on-surface-variant">Gain Weight</p>
+</div>
+</div>
+</section>
+<!-- Action Button -->
+<div class="pt-md">
+<button class="w-full bg-primary text-white font-headline-lg font-quicksand py-4 rounded-full shadow-lg shadow-primary/20 hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-3" onclick="calculatePlan()">
+<span class="material-symbols-outlined">calculate</span>
+                        Calculate My Plan
+                    </button>
+</div>
+</div>
+<!-- Right Column: Calculation Result Area -->
+<div class="md:col-span-5 sticky top-md">
+<div class="nurture-card rounded-lg p-lg text-center space-y-md border-dashed border-2 border-outline-variant bg-transparent flex flex-col items-center justify-center min-h-[400px]" id="result-placeholder">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-4 float-animation">
+<span class="material-symbols-outlined text-primary text-5xl">auto_awesome</span>
+</div>
+<h4 class="font-headline-lg font-quicksand text-outline-variant">Your Plan Awaits</h4>
+<p class="font-body-md text-on-surface-variant px-md">Fill in your details and tap 'Calculate My Plan' to generate your personalized health roadmap.</p>
+</div>
+<!-- Actual Result (Hidden by default) -->
+<div class="hidden nurture-card rounded-lg p-md space-y-lg border-scientific border-t-4 border-t-secondary relative overflow-hidden" id="result-content">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">favorite</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary px-3 py-1 bg-secondary-container rounded-full">Precision Plan</span>
+</div>
+<div class="text-center">
+<p class="font-label-caps text-label-caps text-outline uppercase tracking-widest mb-1">Daily Calorie Target</p>
+<h2 class="font-headline-xl font-quicksand text-primary">2,150 <span class="text-headline-lg font-normal">kcal</span></h2>
+</div>
+<!-- Macronutrient Breakdown -->
+<div class="space-y-md">
+<h5 class="font-quicksand font-bold text-on-surface text-lg">Macronutrient Breakdown</h5>
+<!-- Protein -->
+<div class="space-y-1">
+<div class="flex justify-between items-end">
+<span class="font-quicksand font-semibold text-secondary">Protein</span>
+<span class="font-data-display text-primary">160g (30%)</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[30%] rounded-full"></div>
+</div>
+</div>
+<!-- Carbs -->
+<div class="space-y-1">
+<div class="flex justify-between items-end">
+<span class="font-quicksand font-semibold text-tertiary">Carbohydrates</span>
+<span class="font-data-display text-primary">240g (45%)</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[45%] rounded-full"></div>
+</div>
+</div>
+<!-- Fats -->
+<div class="space-y-1">
+<div class="flex justify-between items-end">
+<span class="font-quicksand font-semibold text-primary">Healthy Fats</span>
+<span class="font-data-display text-primary">60g (25%)</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[25%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Buddy Message -->
+<div class="bg-surface-container-low p-md rounded-lg relative">
+<div class="absolute -top-3 left-4 w-6 h-6 bg-surface-container-low rotate-45"></div>
+<p class="font-body-md text-on-surface italic leading-relaxed">
+                            "Based on your profile, here is your personal roadmap to feeling your best! Remember, small steps lead to big shifts. You've got this!"
+                        </p>
+<div class="mt-sm flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A small, friendly circular avatar of a cheerful cartoon health companion robot with a gentle smile and soft blue glowing eyes, designed in a soft minimalist style that feels approachable and warm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjd2gM_r7BCz7TfDRHy4mff3rhDxc608qW3tB4txooYGN9sMPd2E_usVGZXNeXtFzpvQUkpnCzABii39WN-95LkhgV_bN_Ss-H9yCLrUNOybi457ozW7MAyJfeWjYsegphlGBkP7yFlA1qeEirx92AeneqH9GDRW1Z-QLGJ1kvlBmxL6zMOQqXxgDGCyWU-I4ygNXft2Betny1J6jfWrlpOppdU06VtkTLl1eEkPhk5IiG4ddu4omRduw7c05AUjt6Yq291hf98s"/>
+</div>
+<span class="font-quicksand font-bold text-sm text-primary">Health Buddy</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+        function selectGender(element) {
+            document.querySelectorAll('.gender-pill').forEach(pill => {
+                pill.classList.remove('pill-button-active');
+            });
+            element.classList.add('pill-button-active');
+        }
+
+        function selectGoal(element) {
+            document.querySelectorAll('.goal-card').forEach(card => {
+                card.classList.remove('bg-primary-container', 'border-primary-container', 'shadow-sm');
+                card.classList.add('border-surface-variant');
+                card.querySelector('p').classList.replace('text-on-primary-container', 'text-on-surface-variant');
+                card.querySelector('span').classList.replace('text-primary', 'text-secondary');
+                card.querySelector('span').classList.remove('scale-110');
+            });
+            
+            element.classList.remove('border-surface-variant');
+            element.classList.add('bg-primary-container', 'border-primary-container', 'shadow-sm');
+            element.querySelector('p').classList.replace('text-on-surface-variant', 'text-on-primary-container');
+            element.querySelector('span').classList.replace('text-secondary', 'text-primary');
+            element.querySelector('span').classList.add('scale-110');
+        }
+
+        function calculatePlan() {
+            const placeholder = document.getElementById('result-placeholder');
+            const content = document.getElementById('result-content');
+            
+            // Subtle transition effect
+            placeholder.classList.add('opacity-0', 'scale-95');
+            
+            setTimeout(() => {
+                placeholder.classList.add('hidden');
+                content.classList.remove('hidden');
+                content.classList.add('animate-in', 'fade-in', 'slide-in-from-bottom-4', 'duration-500');
+            }, 300);
+        }
+    </script>
+</body></html>

@@ -52,7 +52,11 @@ export default function Today({ store, goStack }) {
   return (
     <>
       <div className="topbar">
-        <div className="avatar">🌿</div>
+        <div className="avatar">
+          {state.profile.avatar
+            ? <img src={state.profile.avatar} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+            : '🌿'}
+        </div>
         <div style={{ flex: 1 }}>
           <div className="hello">{greeting()}, {state.profile.name}</div>
           <div className="sub">Вы отлично справляетесь.</div>
